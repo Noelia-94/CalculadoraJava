@@ -108,12 +108,27 @@ public class Calculadoraa extends javax.swing.JFrame {
 
         btnRestar.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         btnRestar.setText("-");
+        btnRestar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRestarActionPerformed(evt);
+            }
+        });
 
         btnMultiplicar.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         btnMultiplicar.setText("*");
+        btnMultiplicar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMultiplicarActionPerformed(evt);
+            }
+        });
 
         btnDividir.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         btnDividir.setText("/");
+        btnDividir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDividirActionPerformed(evt);
+            }
+        });
 
         btnBorrar.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         btnBorrar.setText("C");
@@ -219,6 +234,27 @@ public class Calculadoraa extends javax.swing.JFrame {
         double num2 = Double.parseDouble(txtNum2.getText());
         txtResul.setText(String.valueOf(num1 + num2));
     }//GEN-LAST:event_btnSumarActionPerformed
+
+    private void btnRestarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRestarActionPerformed
+        // TODO add your handling code here:
+         double num1 = Double.parseDouble(txtNum1.getText());
+        double num2 = Double.parseDouble(txtNum2.getText());
+        txtResul.setText(String.valueOf(num1 - num2));
+    }//GEN-LAST:event_btnRestarActionPerformed
+
+    private void btnMultiplicarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMultiplicarActionPerformed
+        // TODO add your handling code here:
+         double num1 = Double.parseDouble(txtNum1.getText());
+        double num2 = Double.parseDouble(txtNum2.getText());
+        txtResul.setText(String.valueOf(num1 * num2));
+    }//GEN-LAST:event_btnMultiplicarActionPerformed
+
+    private void btnDividirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDividirActionPerformed
+        // TODO add your handling code here:
+         double num1 = Double.parseDouble(txtNum1.getText());
+        double num2 = Double.parseDouble(txtNum2.getText());
+        txtResul.setText(String.valueOf(num1 / num2));
+    }//GEN-LAST:event_btnDividirActionPerformed
 
     /**
      * @param args the command line arguments
