@@ -39,7 +39,9 @@ public class Calculadoraa extends javax.swing.JFrame {
         btnRestar = new javax.swing.JButton();
         btnMultiplicar = new javax.swing.JButton();
         btnDividir = new javax.swing.JButton();
-        btnBorrar = new javax.swing.JButton();
+        btnRaizCubica = new javax.swing.JButton();
+        btnRaizCuadrada = new javax.swing.JButton();
+        btnDividir1 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -130,43 +132,59 @@ public class Calculadoraa extends javax.swing.JFrame {
             }
         });
 
-        btnBorrar.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        btnBorrar.setText("C");
+        btnRaizCubica.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        btnRaizCubica.setText(" √3");
+
+        btnRaizCuadrada.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        btnRaizCuadrada.setText(" √2");
+
+        btnDividir1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        btnDividir1.setText("Factorial");
+        btnDividir1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDividir1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnSumar)
+                    .addComponent(btnMultiplicar))
+                .addGap(27, 27, 27)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnRestar)
+                    .addComponent(btnDividir))
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(btnRaizCuadrada)
+                        .addGap(28, 28, 28)
+                        .addComponent(btnRaizCubica))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnSumar)
-                            .addComponent(btnMultiplicar, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addGap(46, 46, 46)
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnDividir)
-                            .addComponent(btnRestar))
-                        .addGap(114, 114, 114))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                        .addComponent(btnBorrar)
-                        .addGap(152, 152, 152))))
+                        .addGap(30, 30, 30)
+                        .addComponent(btnDividir1, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnSumar)
-                    .addComponent(btnRestar))
-                .addGap(38, 38, 38)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnMultiplicar)
-                    .addComponent(btnDividir))
-                .addGap(35, 35, 35)
-                .addComponent(btnBorrar)
-                .addContainerGap(53, Short.MAX_VALUE))
+                    .addComponent(btnRestar)
+                    .addComponent(btnRaizCuadrada)
+                    .addComponent(btnRaizCubica))
+                .addGap(32, 32, 32)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnSumar)
+                    .addComponent(btnDividir)
+                    .addComponent(btnDividir1))
+                .addContainerGap(150, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -256,6 +274,17 @@ public class Calculadoraa extends javax.swing.JFrame {
         txtResul.setText(String.valueOf(num1 / num2));
     }//GEN-LAST:event_btnDividirActionPerformed
 
+    private void btnDividir1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDividir1ActionPerformed
+        // TODO add your handling code here:
+        int x = Integer.valueOf(txtNum1.getText());
+        int factorial =1;
+        while (x !=0) {
+        factorial *=x;
+        x--;
+        txtResul.setText(String.valueOf(factorial));
+        }
+    }//GEN-LAST:event_btnDividir1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -292,9 +321,11 @@ public class Calculadoraa extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBorrar;
     private javax.swing.JButton btnDividir;
+    private javax.swing.JButton btnDividir1;
     private javax.swing.JButton btnMultiplicar;
+    private javax.swing.JButton btnRaizCuadrada;
+    private javax.swing.JButton btnRaizCubica;
     private javax.swing.JButton btnRestar;
     private javax.swing.JButton btnSumar;
     private javax.swing.JLabel jLabel1;
