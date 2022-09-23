@@ -280,6 +280,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value=" &#x221a;3"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRaizCubicaActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnRaizCuadrada">
               <Properties>
@@ -288,6 +291,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value=" &#x221a;2"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRaizCuadradaActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnDividir1">
               <Properties>
