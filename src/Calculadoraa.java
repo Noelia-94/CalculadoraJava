@@ -100,6 +100,11 @@ public class Calculadoraa extends javax.swing.JFrame {
 
         btnSumar.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         btnSumar.setText("+");
+        btnSumar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSumarActionPerformed(evt);
+            }
+        });
 
         btnRestar.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         btnRestar.setText("-");
@@ -207,6 +212,13 @@ public class Calculadoraa extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnSumarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSumarActionPerformed
+        // TODO add your handling code here:
+        double num1 = Double.parseDouble(txtNum1.getText());
+        double num2 = Double.parseDouble(txtNum2.getText());
+        txtResul.setText(String.valueOf(num1 + num2));
+    }//GEN-LAST:event_btnSumarActionPerformed
 
     /**
      * @param args the command line arguments
